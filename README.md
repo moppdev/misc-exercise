@@ -8,3 +8,5 @@ A repository of random programming questions' solutions
 FizzBuzz
 <br>
 Name Generator
+<br>
+BMI Calculator
