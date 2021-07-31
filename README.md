@@ -10,3 +10,5 @@ FizzBuzz
 Name Generator
 <br>
 BMI Calculator
+<br>
+Age in Seconds Calculator
