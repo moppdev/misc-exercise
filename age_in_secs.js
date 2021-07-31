@@ -21,7 +21,7 @@ function calculate_age(age_year) {
     //get the seconds from the hours
     var seconds = minutes * 60;
     return seconds;
-}
+};
 
 // get the user's age in years
 function get_age() {
@@ -32,7 +32,7 @@ function get_age() {
         alert("Invalid input entered");
     }
     return age;
-}
+};
 
 // output the user's age in seconds
 console.log(calculate_age(get_age));
