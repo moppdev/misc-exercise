@@ -3,19 +3,19 @@
 // calculate the user's age in seconds
 function calculate_age(age_year) {
     // get the months from the years
-    let months;
+    var months;
     months = age_year * 12;
 
     // 30 days were used as a common denominator for each month
-    let days;
+    var days;
     days = months * 30;
     
     //get the hours from the days
-    let hours;
+    var hours;
     hours = days * 24;
 
     //get the minutes from the hours
-    let minutes;
+    var minutes;
     minutes = hours * 60;
 
     //get the seconds from the hours
