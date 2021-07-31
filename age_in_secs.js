@@ -35,4 +35,4 @@ function get_age() {
 };
 
 // output the user's age in seconds
-alert("Age in seconds: " + calculate_age(get_age));
+console.log("Age in seconds: " + calculate_age(get_age));
