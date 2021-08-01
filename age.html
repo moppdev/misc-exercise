@@ -5,50 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age in seconds</title>
-    <script>
-        // calculate the user's age in seconds
-
-        var output = document.getElementById("output");
-
-        function calculate_age(age_year) {
-            // get the months from the years
-            var months, days, hours, minutes;
-            months = age_year * 12;
-
-            // 30 days were used as a common denominator for each month
-            days = months * 30;
-            
-            //get the hours from the days
-            hours = days * 24;
-
-            //get the minutes from the hours
-            minutes = hours * 60;
-
-            //get the seconds from the minutes
-            var seconds = minutes * 60;
-            return seconds;
-        };
-
-        // get the user's age in years
-        function get_age() {
-            var age = document.getElementById("age");
-            try {
-                age_conv = parseInt(age);
-            } catch (TypeError) {
-                output.innerHTML = "Invalid input entered";
-                return ;
-            }
-            if (age < 0) {
-                output.innerHTML = "Negative number entered";
-                return ;
-            }
-            return age;
-        };
-
-        document.getElementById("sub").addEventListener('onclick', function () {
-            output.innerHTML = "Age in seconds: " + toString(calculate_age(get_age())) + " seconds";
-        });
-    </script>
     <style>
         h1, p, form {
             display: flex;
@@ -77,11 +33,57 @@
 <body>
     <h1>Age in seconds calculator</h1>
     <p>Convert your age into seconds!</p>
-    <form action="">
+    <form id='ageForm'>
         <label for="age">Enter your age in years:</label>
         <input type="number" min='1' max='120' name='age' id='age'>
         <button type="submit" id='sub'>Calculate</button>
     </form>
     <p id='output'></p>
+        <script>
+        // calculate the user's age in seconds
+
+        const output = document.getElementById("output");
+        const ageForm = document.getElementById("ageForm");
+        ageForm.addEventListener('submit', function () {
+            event.preventDefault();
+            const age = calculate_age(get_age());
+            if (age < 0) {
+                output.innerHtml = 'Age must be greater than 1.';
+            } else {
+                output.innerHTML = `Age in seconds: ${age} seconds`;
+            }
+        })
+
+        function calculate_age(age_year) {
+            // get the months from the years
+            var months, days, hours, minutes;
+            months = age_year * 12;
+
+            // 30 days were used as a common denominator for each month
+            days = months * 30;
+            
+            //get the hours from the days
+            hours = days * 24;
+
+            //get the minutes from the hours
+            minutes = hours * 60;
+
+            //get the seconds from the minutes
+            var seconds = minutes * 60;
+            return seconds;
+        };
+
+        // get the user's age in years
+        function get_age() {
+            var age = document.getElementById("age");
+            try {
+                return parseInt(age.value);
+            } catch (TypeError) {
+                output.innerHTML = "Invalid input entered";
+                return -1;
+            }
+            return age;
+        };
+    </script>
 </body>
 </html>
