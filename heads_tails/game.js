@@ -3,11 +3,28 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     default_view();
+    document.querySelector('#heads-tile').onclick = () => {
+        get_winner("heads");
+        console.log("Heads selected!");
+    };
+    document.querySelector('#tails-tile').onclick = () => {
+        get_winner("tails");
+        console.log("Tails selected!");
+    };
 });
 
-function get_winner()
+function get_winner(selection)
 {
-    //TODO
+    let decider_number = Math.ceil(Math.random());
+    console.log(decider_number);
+    if (decider_number === 0)
+    {
+        display_winner("heads", selection);
+    }
+    else
+    {
+        display_winner("tails", selection);
+    }
 };
 
 function display_winner()
