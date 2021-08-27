@@ -27,7 +27,7 @@ function get_winner(selection)
     }
 };
 
-function display_winner()
+function display_winner(outcome, selection)
 {
     // remove the selection block and show the winner
     const select = document.querySelector('#select-view');
@@ -36,6 +36,15 @@ function display_winner()
     select.style.display = 'none';
     result.style.display = 'block';
     load.style.display = 'none';
+
+    if (outcome === selection) 
+    {
+        //TODO: Win Outcome
+    }
+    else 
+    {
+        //TODO: Lose Outcome
+    }
 }
 
 function default_view()

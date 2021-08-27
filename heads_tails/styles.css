@@ -1,7 +1,49 @@
-#heads-tile {
-    background-color: brown;
+.tiles {
+    border: black 1px solid;
+    border-radius: 0.2em;
+    margin: 0.45em 4.5em;
+    padding: 0.45em;
+    display: inline-block;
 }
 
-#tails-tile {
-    background-color: aqua;
+.tiles:hover {
+    animation-name: glow;
+    animation-duration: 2.5s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+    0% {
+        color: black;
+        background-color: white;
+    }
+    50% {
+        color: white;
+        background-color: blue;
+    }
+    100% {
+        color: white;
+        background-color: blue;
+    }
+}
+
+#select-view {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+
+div {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 0.65em;
+}
+
+img {
+    display: flex;
+    flex: auto;
 }
