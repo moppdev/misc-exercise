@@ -5,3 +5,7 @@
 #tails-tile {
     background-color: aqua;
 }
+
+#select-view {
+    display: block;
+}
