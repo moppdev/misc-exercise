@@ -9,3 +9,7 @@
 #select-view {
     display: block;
 }
+
+#load-view, #result-view {
+    display: none;   
+}
