@@ -5,11 +5,3 @@
 #tails-tile {
     background-color: aqua;
 }
-
-#select-view {
-    display: block;
-}
-
-#load-view, #result-view {
-    display: none;   
-}
