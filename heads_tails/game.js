@@ -15,16 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function get_winner(selection)
 {
+    const select = document.querySelector('#select-view');
+    select.style.display = 'none';
     let decider_number = Math.ceil(Math.random());
     console.log(decider_number);
-    if (decider_number === 0)
-    {
-        display_winner("heads", selection);
-    }
-    else
-    {
-        display_winner("tails", selection);
-    }
+    const load = document.querySelector('#load-view');
+    load.style.display = 'block';
+    setTimeout(() => {
+        if (decider_number === 0)
+        {
+            display_winner("heads", selection);
+        }
+        else
+        {
+            display_winner("tails", selection);
+        }
+    }, 6300);
 };
 
 function display_winner(outcome, selection)
