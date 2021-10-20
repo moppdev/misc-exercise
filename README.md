@@ -1,5 +1,5 @@
 # misc-exercise
-A repository of random programming questions' solutions (files/folders labeled PE is from [Project Euler](https://projecteuler.net/))
+A repository of random programming questions' solutions
 
 ![image](https://user-images.githubusercontent.com/52240770/127628541-a0a80121-2ec9-4acf-af91-c18008c41c69.png)
 
