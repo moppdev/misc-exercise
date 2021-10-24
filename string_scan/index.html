@@ -13,6 +13,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- TODO -->
+    <div class="container" id='input-con'>
+        <h1 class="breathe">String Scanner</h1>
+        <hr>
+        <p>
+            Enter a string in the textarea below to get some interesting stats about it!
+        </p>
+        <form class="form">
+            <label for="str_input"><strong>Enter your string here:</strong></label>
+            <textarea cols="20" rows='10' class='form-control' name="str_input" id="str_input"></textarea>
+        </form>
+    </div>
+    <div class="container" id='results-con'>
+        <h3 class="breathe">String Stats:</h3>
+        <hr>
+        <p>See the statistics about your string right here in real-time!</p>
+        <div id="par">0 paragraphs</div>
+        <div id="sen">0 sentences</div>
+        <div id='words'>0 words</div>
+        <div id='char'>0 characters</div>
+        <div id='com'>0 commas</div>
+    </div>
 </body>
 </html>

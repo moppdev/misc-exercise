@@ -1,0 +1,23 @@
+h3, h1 {
+    padding: 0.3em 0 0.3em 0;
+}
+
+.breathe {
+    animation: breathe 2s normal forwards;
+}
+
+body {
+    background-color: bisque;
+}
+
+@keyframes breathe {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
