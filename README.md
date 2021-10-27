@@ -12,3 +12,5 @@ Name Generator
 BMI Calculator
 <br>
 Age in Seconds Calculator
+<br>
+Heads or Tails
