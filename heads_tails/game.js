@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     default_view();
     document.querySelector('#heads-tile').onclick = () => {
         get_winner("heads");
-        console.log("Heads selected!");
     };
     document.querySelector('#tails-tile').onclick = () => {
         get_winner("tails");
-        console.log("Tails selected!");
+    };
+    document.querySelector("#reset").onclick = () => {
+        default_view();
+        document.querySelector("#showRes").remove();
     };
 });
 
@@ -39,17 +41,23 @@ function display_winner(outcome, selection)
     const select = document.querySelector('#select-view');
     const result = document.querySelector('#result-view');
     const load = document.querySelector('#load-view');
+    const reset = document.querySelector("#reset");
     select.style.display = 'none';
     result.style.display = 'block';
     load.style.display = 'none';
 
+    const showRes = document.createElement("p");
+    showRes.id = "showRes";
+    result.appendChild(showRes);
     if (outcome === selection) 
     {
-        //TODO: Win Outcome
+        showRes.textContent = "You Win!";
+        reset.style.display = 'block';
     }
     else 
     {
-        //TODO: Lose Outcome
+        showRes.textContent = "You Lose!";
+        reset.style.display = 'block';
     }
 }
 
@@ -59,7 +67,9 @@ function default_view()
     const select = document.querySelector('#select-view');
     const result = document.querySelector('#result-view');
     const load = document.querySelector('#load-view');
+    const reset = document.querySelector("#reset");
     select.style.display = 'block';
     result.style.display = 'none';
     load.style.display = 'none';
+    reset.style.display = "none";
 }
